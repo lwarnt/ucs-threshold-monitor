@@ -29,7 +29,7 @@ def send_mail(subject: str, message: str) -> None:
     msg = EmailMessage()
     html_content = (
         f"<h3>{subject}</h3>"
-        f"<a href='https://{UCS_HOST}/app/ucsm/index.html'>Check here to got to UCSM!</a>"
+        f"<a href='https://{UCS_HOST}/app/ucsm/index.html'>Check here to go to UCSM!</a>"
         f"<pre>{message}</pre></br>"
     )
     msg.add_alternative(html_content, subtype="html")
