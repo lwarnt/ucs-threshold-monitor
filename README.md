@@ -32,9 +32,12 @@ After=network.target
 [Service]
 Type=simple
 WorkingDirectory=$wd
+StandardOutput=journal
+StandardError=journal
 ExecStart=$wd/venv/bin/python $wd/monitor.py
 Restart=always
 RestartSec=30
+Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target
